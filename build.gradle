@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'org.springframework.boot' version '2.1.1.RELEASE'
+}
+
+group 'com.github.pawelj_pl.csrf_error'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.10
+
+repositories {
+    mavenCentral()
+}
+
+idea {
+    module {
+        downloadSources = true
+    }
+}
+
+dependencies {
+    compile ('org.springframework.boot:spring-boot-starter-web:2.1.1.RELEASE') { 
+        exclude module: 'spring-boot-starter-tomcat'
+    }
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-jetty', version: '2.1.1.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.1.1.RELEASE'
+    compile group: 'org.springframework.session', name: 'spring-session-data-redis', version: '2.1.2.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: '2.1.1.RELEASE'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
