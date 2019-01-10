@@ -21,7 +21,7 @@ idea {
 
 dependencies {
     compile ('org.springframework.boot:spring-boot-starter-web:2.1.1.RELEASE') { 
-        exclude module: 'spring-boot-starter-tomcat'
+//        exclude module: 'spring-boot-starter-tomcat'
     }
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-jetty', version: '2.1.1.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.1.1.RELEASE'
